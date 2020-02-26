@@ -1,0 +1,1987 @@
+$schema: http://json-schema.org/draft-07/schema#
+definitions:
+  Address:
+    $id: '#/definitions/Address'
+    type: object
+    title: The Address Schema
+    required:
+      - AddressCSV
+      - Description
+      - Location
+      - LocationType
+      - NIAID
+      - NZMDEasting
+      - NZMDNorthing
+      - PoliceStation
+      - PostCode
+      - StreetName
+      - StreetNumber
+      - StreetType
+      - StreetTypeDesc
+      - Suburb
+    properties:
+      AddressCSV:
+        $id: '#/definitions/Address/properties/AddressCSV'
+        type: string
+        title: The Addresscsv Schema
+        examples:
+          - 943 HIGH STREET, AVALON, LOWER HUTT CITY 5011
+        pattern: ^(.*)$
+      Description:
+        $id: '#/definitions/Address/properties/Description'
+        type: string
+        title: The Description Schema
+        examples:
+          - 943 HIGH STREET, AVALON, LOWER HUTT CITY 5011
+        pattern: ^(.*)$
+      Location:
+        $id: '#/definitions/Address/properties/Location'
+        type: string
+        title: The Location Schema
+        examples:
+          - '     '
+        pattern: ^(.*)$
+      LocationType:
+        $id: '#/definitions/Address/properties/LocationType'
+        type: string
+        title: The Locationtype Schema
+        examples:
+          - '56'
+        pattern: ^(.*)$
+      NIAID:
+        $id: '#/definitions/Address/properties/NIAID'
+        type: string
+        title: The Niaid Schema
+        examples:
+          - '554610613758'
+        pattern: ^(.*)$
+      NZMDEasting:
+        $id: '#/definitions/Address/properties/NZMDEasting'
+        type: string
+        title: The Nzmdeasting Schema
+        examples:
+          - '1763015'
+        pattern: ^(.*)$
+      NZMDNorthing:
+        $id: '#/definitions/Address/properties/NZMDNorthing'
+        type: string
+        title: The Nzmdnorthing Schema
+        examples:
+          - '5437976'
+        pattern: ^(.*)$
+      PoliceStation:
+        $id: '#/definitions/Address/properties/PoliceStation'
+        type: string
+        title: The Policestation Schema
+        examples:
+          - '277'
+        pattern: ^(.*)$
+      PostCode:
+        $id: '#/definitions/Address/properties/PostCode'
+        type: string
+        title: The Postcode Schema
+        examples:
+          - '5011'
+        pattern: ^(.*)$
+      StreetName:
+        $id: '#/definitions/Address/properties/StreetName'
+        type: string
+        title: The Streetname Schema
+        examples:
+          - HIGH
+        pattern: ^(.*)$
+      StreetNumber:
+        $id: '#/definitions/Address/properties/StreetNumber'
+        type: string
+        title: The Streetnumber Schema
+        examples:
+          - '943'
+        pattern: ^(.*)$
+      StreetType:
+        $id: '#/definitions/Address/properties/StreetType'
+        type: string
+        title: The Streettype Schema
+        examples:
+          - '39'
+        pattern: ^(.*)$
+      StreetTypeDesc:
+        $id: '#/definitions/Address/properties/StreetTypeDesc'
+        type: string
+        title: The Streettypedesc Schema
+        examples:
+          - Street
+        pattern: ^(.*)$
+      Suburb:
+        $id: '#/definitions/Address/properties/Suburb'
+        type: string
+        title: The Suburb Schema
+        examples:
+          - AVALON
+        pattern: ^(.*)$
+  EmailAddress:
+    $id: '#/definitions/EmailAddress'
+    type: array
+    title: The Emailaddress Schema
+    items:
+      $id: '#/definitions/EmailAddress/items'
+      type: object
+      title: The Items Schema
+      required:
+        - Email
+      properties:
+        Email:
+          $id: '#/definitions/EmailAddress/items/properties/Email'
+          type: string
+          title: The Email Schema
+          examples:
+            - jasoncatlover@gmail.com
+          pattern: ^(.*)$
+  FreeFormAddress:
+    $id: '#/definitions/FreeFormAddress'
+    type: object
+    title: The Freeformaddress Schema
+    required:
+      - Country
+      - IsOverSee
+      - StreetDirectionSuffix
+      - StreetName
+      - StreetNumber
+      - StreetType
+      - TownSuburb
+      - UnitNumber
+      - UnitType
+    properties:
+      Country:
+        $id: '#/definitions/FreeFormAddress/properties/Country'
+        type: string
+        title: The Country Schema
+        examples:
+          - New Zealand
+        pattern: ^(.*)$
+      IsOverSee:
+        $id: '#/definitions/FreeFormAddress/properties/IsOverSee'
+        type: string
+        title: The Isoversee Schema
+        examples:
+          - New Zealand
+        pattern: ^(.*)$
+      StreetDirectionSuffix:
+        $id: '#/definitions/FreeFormAddress/properties/StreetDirectionSuffix'
+        type: string
+        title: The Streetdirectionsuffix Schema
+        examples:
+          - West
+        pattern: ^(.*)$
+      StreetName:
+        $id: '#/definitions/FreeFormAddress/properties/StreetName'
+        type: string
+        title: The Streetname Schema
+        examples:
+          - High Street
+        pattern: ^(.*)$
+      StreetNumber:
+        $id: '#/definitions/FreeFormAddress/properties/StreetNumber'
+        type: string
+        title: The Streetnumber Schema
+        examples:
+          - '999'
+        pattern: ^(.*)$
+      StreetType:
+        $id: '#/definitions/FreeFormAddress/properties/StreetType'
+        type: string
+        title: The Streettype Schema
+        examples:
+          - Street
+        pattern: ^(.*)$
+      TownSuburb:
+        $id: '#/definitions/FreeFormAddress/properties/TownSuburb'
+        type: string
+        title: The Townsuburb Schema
+        examples:
+          - Avalon, Lower Hutt City
+        pattern: ^(.*)$
+      UnitNumber:
+        $id: '#/definitions/FreeFormAddress/properties/UnitNumber'
+        type: string
+        title: The Unitnumber Schema
+        examples:
+          - '222'
+        pattern: ^(.*)$
+      UnitType:
+        $id: '#/definitions/FreeFormAddress/properties/UnitType'
+        type: string
+        title: The Unittype Schema
+        examples:
+          - Building
+        pattern: ^(.*)$
+  Phones:
+    $id: '#/definitions/Phones'
+    type: array
+    title: The Phones Schema
+    items:
+      $id: '#/definitions/Phones/items'
+      type: object
+      title: The Items Schema
+      required:
+        - AreaCodeText
+        - CountryCode
+        - PhoneNumberText
+        - PhoneType
+      properties:
+        AreaCodeText:
+          $id: '#/definitions/Phones/items/properties/AreaCodeText'
+          type: string
+          title: The Areacodetext Schema
+          examples:
+            - '22'
+          pattern: ^(.*)$
+        CountryCode:
+          $id: '#/definitions/Phones/items/properties/CountryCode'
+          type: string
+          title: The Countrycode Schema
+          examples:
+            - '64'
+          pattern: ^(.*)$
+        PhoneNumberText:
+          $id: '#/definitions/Phones/items/properties/PhoneNumberText'
+          type: string
+          title: The Phonenumbertext Schema
+          examples:
+            - '12344321'
+          pattern: ^(.*)$
+        PhoneType:
+          $id: '#/definitions/Phones/items/properties/PhoneType'
+          type: string
+          title: The Phonetype Schema
+          examples:
+            - Mobile
+          pattern: ^(.*)$
+  Organization:
+    $id: '#/definitions/Organization'
+    type: object
+    title: The Organization Schema
+    required:
+      - OrganisationName
+      - OrganisationNameShadow
+      - OrgNameDescription
+    properties:
+      OrganisationName:
+        $id: '#/definitions/Organization/properties/OrganisationName'
+        type: string
+        title: The Organisationname Schema
+        examples:
+          - BNZ
+        pattern: ^(.*)$
+      OrganisationNameShadow:
+        $id: '#/definitions/Organization/properties/OrganisationNameShadow'
+        type: string
+        title: The Organisationnameshadow Schema
+        examples:
+          - BNZ
+        pattern: ^(.*)$
+      OrgNameDescription:
+        $id: '#/definitions/Organization/properties/OrgNameDescription'
+        type: string
+        title: The Orgnamedescription Schema
+        examples:
+          - Please provide BNZ's details
+        pattern: ^(.*)$
+  OrganisationOwn:
+    $id: '#/definitions/OrganisationOwn'
+    type: object
+    title: The Organisationown Schema
+    required:
+      - NotInLookUp
+      - Address
+      - FreeFormAddress
+      - Organization
+      - Phones
+    properties:
+      NotInLookUp:
+        $id: '#/definitions/OrganisationOwn/properties/NotInLookUp'
+        type: boolean
+        title: The Notinlookup Schema
+        default: false
+        examples:
+          - false
+      Address:
+        $ref: '#/definitions/Address'
+      FreeFormAddress:
+        $ref: '#/definitions/FreeFormAddress'
+      Organization:
+        $ref: '#/definitions/Organization'
+      Phones:
+        $ref: '#/definitions/Phones'
+  OrganizationItem:
+    $id: '#/definitions/OrganizationItem'
+    type: object
+    title: The Organizationitem Schema
+    required:
+      - OrganisationName
+      - OrganisationNameShadow
+    properties:
+      OrganisationName:
+        $id: '#/definitions/OrganizationItem/properties/OrganisationName'
+        type: string
+        title: The Organisationname Schema
+        examples:
+          - BNZ
+        pattern: ^(.*)$
+      OrganisationNameShadow:
+        $id: '#/definitions/OrganizationItem/properties/OrganisationNameShadow'
+        type: string
+        title: The Organisationnameshadow Schema
+        examples:
+          - BNZ
+        pattern: ^(.*)$
+  Owner:
+    $id: '#/definitions/Owner'
+    type: object
+    title: The Owner Schema
+    required:
+      - Fname
+      - FnameShadow
+      - FullNameShadow
+      - Mname
+      - MnameShadow
+      - OwnersFullName
+      - Sname
+      - SnameShadow
+    properties:
+      Fname:
+        $id: '#/definitions/Owner/properties/Fname'
+        type: string
+        title: The Fname Schema
+        examples:
+          - Sars
+        pattern: ^(.*)$
+      FnameShadow:
+        $id: '#/definitions/Owner/properties/FnameShadow'
+        type: string
+        title: The Fnameshadow Schema
+        examples:
+          - Sars
+        pattern: ^(.*)$
+      FullNameShadow:
+        $id: '#/definitions/Owner/properties/FullNameShadow'
+        type: string
+        title: The Fullnameshadow Schema
+        examples:
+          - Sars AGAIN
+        pattern: ^(.*)$
+      Mname:
+        $id: '#/definitions/Owner/properties/Mname'
+        type: string
+        title: The Mname Schema
+        examples:
+          - Come
+        pattern: ^(.*)$
+      MnameShadow:
+        $id: '#/definitions/Owner/properties/MnameShadow'
+        type: string
+        title: The Mnameshadow Schema
+        examples:
+          - Come
+        pattern: ^(.*)$
+      OwnersFullName:
+        $id: '#/definitions/Owner/properties/OwnersFullName'
+        type: string
+        title: The Ownersfullname Schema
+        examples:
+          - Sars AGAIN
+        pattern: ^(.*)$
+      Sname:
+        $id: '#/definitions/Owner/properties/Sname'
+        type: string
+        title: The Sname Schema
+        examples:
+          - AGAIN
+        pattern: ^(.*)$
+      SnameShadow:
+        $id: '#/definitions/Owner/properties/SnameShadow'
+        type: string
+        title: The Snameshadow Schema
+        examples:
+          - AGAIN
+        pattern: ^(.*)$
+  SomebodyOwns:
+    $id: '#/definitions/SomebodyOwns'
+    type: object
+    title: The Somebodyowns Schema
+    required:
+      - AddressType
+      - AgeOrBirth
+      - FirstName
+      - FirstNameShadow
+      - FullNameShadow
+      - Gender
+      - MiddleName
+      - MiddleNameShadow
+      - NotInLookUp
+      - Relation
+      - SurName
+      - SurNameShadow
+      - VictimSupport
+      - EmailAddress
+      - Address
+      - FreeFormAddress
+      - Phones
+    properties:
+      AddressType:
+        $id: '#/definitions/SomebodyOwns/properties/AddressType'
+        type: string
+        title: The Addresstype Schema
+        examples:
+          - Contact address
+        pattern: ^(.*)$
+      AgeOrBirth:
+        $id: '#/definitions/SomebodyOwns/properties/AgeOrBirth'
+        type: string
+        title: The Ageorbirth Schema
+        examples:
+          - 02/02/2002
+        pattern: ^(.*)$
+      FirstName:
+        $id: '#/definitions/SomebodyOwns/properties/FirstName'
+        type: string
+        title: The Firstname Schema
+        examples:
+          - Jason
+        pattern: ^(.*)$
+      FirstNameShadow:
+        $id: '#/definitions/SomebodyOwns/properties/FirstNameShadow'
+        type: string
+        title: The Firstnameshadow Schema
+        examples:
+          - Jason
+        pattern: ^(.*)$
+      FullNameShadow:
+        $id: '#/definitions/SomebodyOwns/properties/FullNameShadow'
+        type: string
+        title: The Fullnameshadow Schema
+        examples:
+          - Jason LOVER
+        pattern: ^(.*)$
+      Gender:
+        $id: '#/definitions/SomebodyOwns/properties/Gender'
+        type: string
+        title: The Gender Schema
+        examples:
+          - Male
+        pattern: ^(.*)$
+      MiddleName:
+        $id: '#/definitions/SomebodyOwns/properties/MiddleName'
+        type: string
+        title: The Middlename Schema
+        examples:
+          - Cat
+        pattern: ^(.*)$
+      MiddleNameShadow:
+        $id: '#/definitions/SomebodyOwns/properties/MiddleNameShadow'
+        type: string
+        title: The Middlenameshadow Schema
+        examples:
+          - Cat
+        pattern: ^(.*)$
+      NotInLookUp:
+        $id: '#/definitions/SomebodyOwns/properties/NotInLookUp'
+        type: boolean
+        title: The Notinlookup Schema
+        default: false
+        examples:
+          - false
+      Relation:
+        $id: '#/definitions/SomebodyOwns/properties/Relation'
+        type: string
+        title: The Relation Schema
+        examples:
+          - Known to Each Other
+        pattern: ^(.*)$
+      SurName:
+        $id: '#/definitions/SomebodyOwns/properties/SurName'
+        type: string
+        title: The Surname Schema
+        examples:
+          - LOVER
+        pattern: ^(.*)$
+      SurNameShadow:
+        $id: '#/definitions/SomebodyOwns/properties/SurNameShadow'
+        type: string
+        title: The Surnameshadow Schema
+        examples:
+          - LOVER
+        pattern: ^(.*)$
+      VictimSupport:
+        $id: '#/definitions/SomebodyOwns/properties/VictimSupport'
+        type: string
+        title: The Victimsupport Schema
+        examples:
+          - 'No'
+        pattern: ^(.*)$
+      EmailAddress:
+        $ref: '#/definitions/EmailAddress'
+      Address:
+        $ref: '#/definitions/Address'
+      FreeFormAddress:
+        $ref: '#/definitions/FreeFormAddress'
+      Phones:
+        $ref: '#/definitions/Phones'
+$id: http://example.com/root.json
+type: object
+title: The Root Schema
+required:
+  - caseTypeID
+  - createdBy
+  - createTime
+  - ID
+  - lastUpdatedBy
+  - lastUpdateTime
+  - name
+  - stage
+  - status
+  - urgency
+  - content
+properties:
+  caseTypeID:
+    $id: '#/properties/caseTypeID'
+    type: string
+    title: The Casetypeid Schema
+    examples:
+      - Police-SDW-Work-OnlineReporting
+    pattern: ^(.*)$
+  createdBy:
+    $id: '#/properties/createdBy'
+    type: string
+    title: The Createdby Schema
+    examples:
+      - AU52471580004176811
+    pattern: ^(.*)$
+  createTime:
+    $id: '#/properties/createTime'
+    type: string
+    title: The Createtime Schema
+    examples:
+      - '2020-01-26T02:02:57.323Z'
+    pattern: ^(.*)$
+  ID:
+    $id: '#/properties/ID'
+    type: string
+    title: The Id Schema
+    examples:
+      - POLICE-SDW-WORK OR-9788N
+    pattern: ^(.*)$
+  lastUpdatedBy:
+    $id: '#/properties/lastUpdatedBy'
+    type: string
+    title: The Lastupdatedby Schema
+    examples:
+      - AU52471580004176811
+    pattern: ^(.*)$
+  lastUpdateTime:
+    $id: '#/properties/lastUpdateTime'
+    type: string
+    title: The Lastupdatetime Schema
+    examples:
+      - '2020-01-26T09:03:42.494Z'
+    pattern: ^(.*)$
+  name:
+    $id: '#/properties/name'
+    type: string
+    title: The Name Schema
+    examples:
+      - 105 Online Reporting
+    pattern: ^(.*)$
+  stage:
+    $id: '#/properties/stage'
+    type: string
+    title: The Stage Schema
+    examples:
+      - PRIM2
+    pattern: ^(.*)$
+  status:
+    $id: '#/properties/status'
+    type: string
+    title: The Status Schema
+    examples:
+      - Resolved-Completed
+    pattern: ^(.*)$
+  urgency:
+    $id: '#/properties/urgency'
+    type: string
+    title: The Urgency Schema
+    examples:
+      - '10'
+    pattern: ^(.*)$
+  content:
+    $id: '#/properties/content'
+    type: object
+    title: The Content Schema
+    required:
+      - DeviceType
+      - EditSummary
+      - ExternalStatus
+      - OnDutyIntegrationErrorFlag
+      - Priority
+      - ReportDescription
+      - ReportingChannel
+      - ReportSubmittedDateTime
+      - Stolenfromavehicleindicator
+      - VehicleDamagedIndicator
+      - VehicleStolenIndicator
+      - Assault
+      - DamagedVehicle
+      - DateEntry
+      - EventTypeIndicator
+      - FileUpload
+      - HideInformationMessage
+      - Item
+      - LocationType
+      - Narrative
+      - Offender
+      - OrganizationDoes
+      - Person
+      - Properties
+      - Property
+      - SomebodyElse
+      - StolenVehicle
+    properties:
+      DeviceType:
+        $id: '#/properties/content/properties/DeviceType'
+        type: string
+        title: The Devicetype Schema
+        examples:
+          - desktop
+        pattern: ^(.*)$
+      EditSummary:
+        $id: '#/properties/content/properties/EditSummary'
+        type: boolean
+        title: The Editsummary Schema
+        default: false
+        examples:
+          - false
+      ExternalStatus:
+        $id: '#/properties/content/properties/ExternalStatus'
+        type: string
+        title: The Externalstatus Schema
+        examples:
+          - Complete
+        pattern: ^(.*)$
+      OnDutyIntegrationErrorFlag:
+        $id: '#/properties/content/properties/OnDutyIntegrationErrorFlag'
+        type: boolean
+        title: The Ondutyintegrationerrorflag Schema
+        default: false
+        examples:
+          - true
+      Priority:
+        $id: '#/properties/content/properties/Priority'
+        type: string
+        title: The Priority Schema
+        examples:
+          - P3
+        pattern: ^(.*)$
+      ReportDescription:
+        $id: '#/properties/content/properties/ReportDescription'
+        type: string
+        title: The Reportdescription Schema
+        examples:
+          - ' Hurt Damage Stolen'
+        pattern: ^(.*)$
+      ReportingChannel:
+        $id: '#/properties/content/properties/ReportingChannel'
+        type: string
+        title: The Reportingchannel Schema
+        examples:
+          - Web Form
+        pattern: ^(.*)$
+      ReportSubmittedDateTime:
+        $id: '#/properties/content/properties/ReportSubmittedDateTime'
+        type: string
+        title: The Reportsubmitteddatetime Schema
+        examples:
+          - '2020-01-26T09:03:31.981Z'
+        pattern: ^(.*)$
+      Stolenfromavehicleindicator:
+        $id: '#/properties/content/properties/Stolenfromavehicleindicator'
+        type: string
+        title: The Stolenfromavehicleindicator Schema
+        examples:
+          - 'Yes'
+        pattern: ^(.*)$
+      VehicleDamagedIndicator:
+        $id: '#/properties/content/properties/VehicleDamagedIndicator'
+        type: string
+        title: The Vehicledamagedindicator Schema
+        examples:
+          - 'Yes'
+        pattern: ^(.*)$
+      VehicleStolenIndicator:
+        $id: '#/properties/content/properties/VehicleStolenIndicator'
+        type: string
+        title: The Vehiclestolenindicator Schema
+        examples:
+          - 'Yes'
+        pattern: ^(.*)$
+      Assault:
+        $id: '#/properties/content/properties/Assault'
+        type: object
+        title: The Assault Schema
+        required:
+          - DescriptionShadow
+          - HowInjured
+          - MiscDescriptionShadow
+          - WhoInjured
+        properties:
+          DescriptionShadow:
+            $id: '#/properties/content/properties/Assault/properties/DescriptionShadow'
+            type: string
+            title: The Descriptionshadow Schema
+            examples:
+              - Me and my dog were threatened by a cat.
+            pattern: ^(.*)$
+          HowInjured:
+            $id: '#/properties/content/properties/Assault/properties/HowInjured'
+            type: string
+            title: The Howinjured Schema
+            examples:
+              - Me and my dog were threatened by a cat.
+            pattern: ^(.*)$
+          MiscDescriptionShadow:
+            $id: '#/properties/content/properties/Assault/properties/MiscDescriptionShadow'
+            type: string
+            title: The Miscdescriptionshadow Schema
+            examples:
+              - Me and my dog
+            pattern: ^(.*)$
+          WhoInjured:
+            $id: '#/properties/content/properties/Assault/properties/WhoInjured'
+            type: string
+            title: The Whoinjured Schema
+            examples:
+              - Me and my dog
+            pattern: ^(.*)$
+      DamagedVehicle:
+        $id: '#/properties/content/properties/DamagedVehicle'
+        type: array
+        title: The Damagedvehicle Schema
+        items:
+          $id: '#/properties/content/properties/DamagedVehicle/items'
+          type: object
+          title: The Items Schema
+          required:
+            - Description
+            - DescriptionShadow
+            - DisplayValue
+            - Make
+            - MovedTampered
+            - Registration
+            - VehicleDescription
+            - VehicleDesShadow
+            - VehicleLocation
+            - VehicleTampered
+            - VehicleType
+            - WhoOwnsIt
+            - WhoOwnsItShadow
+            - Owner
+            - SomebodyOwns
+            - Organization
+            - OrganisationOwn
+            - OrganizationItem
+          properties:
+            Description:
+              $id: '#/properties/content/properties/DamagedVehicle/items/properties/Description'
+              type: string
+              title: The Description Schema
+              examples:
+                - flat tyres
+              pattern: ^(.*)$
+            DescriptionShadow:
+              $id: '#/properties/content/properties/DamagedVehicle/items/properties/DescriptionShadow'
+              type: string
+              title: The Descriptionshadow Schema
+              examples:
+                - flat tyres
+              pattern: ^(.*)$
+            DisplayValue:
+              $id: '#/properties/content/properties/DamagedVehicle/items/properties/DisplayValue'
+              type: string
+              title: The Displayvalue Schema
+              examples:
+                - I
+              pattern: ^(.*)$
+            Make:
+              $id: '#/properties/content/properties/DamagedVehicle/items/properties/Make'
+              type: string
+              title: The Make Schema
+              examples:
+                - Toyota Lexus
+              pattern: ^(.*)$
+            MovedTampered:
+              $id: '#/properties/content/properties/DamagedVehicle/items/properties/MovedTampered'
+              type: string
+              title: The Movedtampered Schema
+              examples:
+                - 'Yes'
+              pattern: ^(.*)$
+            Registration:
+              $id: '#/properties/content/properties/DamagedVehicle/items/properties/Registration'
+              type: string
+              title: The Registration Schema
+              examples:
+                - DDD222
+              pattern: ^(.*)$
+            VehicleDescription:
+              $id: '#/properties/content/properties/DamagedVehicle/items/properties/VehicleDescription'
+              type: string
+              title: The Vehicledescription Schema
+              examples:
+                - Model 2004
+              pattern: ^(.*)$
+            VehicleDesShadow:
+              $id: '#/properties/content/properties/DamagedVehicle/items/properties/VehicleDesShadow'
+              type: string
+              title: The Vehicledesshadow Schema
+              examples:
+                - Model 2004
+              pattern: ^(.*)$
+            VehicleLocation:
+              $id: '#/properties/content/properties/DamagedVehicle/items/properties/VehicleLocation'
+              type: string
+              title: The Vehiclelocation Schema
+              examples:
+                - Parked in a public carpark
+              pattern: ^(.*)$
+            VehicleTampered:
+              $id: '#/properties/content/properties/DamagedVehicle/items/properties/VehicleTampered'
+              type: string
+              title: The Vehicletampered Schema
+              examples:
+                - 'Yes'
+              pattern: ^(.*)$
+            VehicleType:
+              $id: '#/properties/content/properties/DamagedVehicle/items/properties/VehicleType'
+              type: string
+              title: The Vehicletype Schema
+              examples:
+                - Car
+              pattern: ^(.*)$
+            WhoOwnsIt:
+              $id: '#/properties/content/properties/DamagedVehicle/items/properties/WhoOwnsIt'
+              type: string
+              title: The Whoownsit Schema
+              examples:
+                - I do
+              pattern: ^(.*)$
+            WhoOwnsItShadow:
+              $id: '#/properties/content/properties/DamagedVehicle/items/properties/WhoOwnsItShadow'
+              type: string
+              title: The Whoownsitshadow Schema
+              examples:
+                - I DO
+              pattern: ^(.*)$
+            Owner:
+              $ref: '#/definitions/Owner'
+            SomebodyOwns:
+              $ref: '#/definitions/SomebodyOwns'
+            Organization:
+              $ref: '#/definitions/Organization'
+            OrganisationOwn:
+              $ref: '#/definitions/OrganisationOwn'
+            OrganizationItem:
+              $ref: '#/definitions/OrganizationItem'
+      DateEntry:
+        $id: '#/properties/content/properties/DateEntry'
+        type: object
+        title: The Dateentry Schema
+        required:
+          - FromDate
+          - FromDateTime
+          - FromTime
+          - ToDate
+          - ToDateTime
+          - ToTime
+        properties:
+          FromDate:
+            $id: '#/properties/content/properties/DateEntry/properties/FromDate'
+            type: string
+            title: The Fromdate Schema
+            examples:
+              - '2020-01-26'
+            pattern: ^(.*)$
+          FromDateTime:
+            $id: '#/properties/content/properties/DateEntry/properties/FromDateTime'
+            type: string
+            title: The Fromdatetime Schema
+            examples:
+              - '2020-01-26T01:03:00.000Z'
+            pattern: ^(.*)$
+          FromTime:
+            $id: '#/properties/content/properties/DateEntry/properties/FromTime'
+            type: string
+            title: The Fromtime Schema
+            examples:
+              - '140300'
+            pattern: ^(.*)$
+          ToDate:
+            $id: '#/properties/content/properties/DateEntry/properties/ToDate'
+            type: string
+            title: The Todate Schema
+            examples:
+              - '2020-01-26'
+            pattern: ^(.*)$
+          ToDateTime:
+            $id: '#/properties/content/properties/DateEntry/properties/ToDateTime'
+            type: string
+            title: The Todatetime Schema
+            examples:
+              - '2020-01-26T02:03:00.000Z'
+            pattern: ^(.*)$
+          ToTime:
+            $id: '#/properties/content/properties/DateEntry/properties/ToTime'
+            type: string
+            title: The Totime Schema
+            examples:
+              - '150300'
+            pattern: ^(.*)$
+      EventTypeIndicator:
+        $id: '#/properties/content/properties/EventTypeIndicator'
+        type: object
+        title: The Eventtypeindicator Schema
+        required:
+          - BeenDamaged
+          - BeenHurt
+          - BeenStolen
+          - DoContinue
+          - LostProperty
+          - Other
+        properties:
+          BeenDamaged:
+            $id: '#/properties/content/properties/EventTypeIndicator/properties/BeenDamaged'
+            type: boolean
+            title: The Beendamaged Schema
+            default: false
+            examples:
+              - false
+          BeenHurt:
+            $id: '#/properties/content/properties/EventTypeIndicator/properties/BeenHurt'
+            type: boolean
+            title: The Beenhurt Schema
+            default: false
+            examples:
+              - false
+          BeenStolen:
+            $id: '#/properties/content/properties/EventTypeIndicator/properties/BeenStolen'
+            type: boolean
+            title: The Beenstolen Schema
+            default: false
+            examples:
+              - false
+          DoContinue:
+            $id: '#/properties/content/properties/EventTypeIndicator/properties/DoContinue'
+            type: boolean
+            title: The Docontinue Schema
+            default: false
+            examples:
+              - true
+          LostProperty:
+            $id: '#/properties/content/properties/EventTypeIndicator/properties/LostProperty'
+            type: boolean
+            title: The Lostproperty Schema
+            default: false
+            examples:
+              - true
+          Other:
+            $id: '#/properties/content/properties/EventTypeIndicator/properties/Other'
+            type: boolean
+            title: The Other Schema
+            default: false
+            examples:
+              - false
+      FileUpload:
+        $id: '#/properties/content/properties/FileUpload'
+        type: array
+        title: The Fileupload Schema
+      HideInformationMessage:
+        $id: '#/properties/content/properties/HideInformationMessage'
+        type: object
+        title: The Hideinformationmessage Schema
+      Item:
+        $id: '#/properties/content/properties/Item'
+        type: array
+        title: The Item Schema
+        items:
+          $id: '#/properties/content/properties/Item/items'
+          type: object
+          title: The Items Schema
+          required:
+            - Category
+            - DisplayValue
+            - ItemDescription
+            - ItemDescriptionShadow
+            - ItemName
+            - ItemValueDoller
+            - NIAItemName
+            - NotInLookUp
+            - SerialNumber
+            - WhoOwnsIt
+            - WhoOwnsItShadow
+            - Owner
+            - SomebodyOwns
+            - Organization
+            - OrganisationOwn
+            - OrganizationItem
+          properties:
+            Category:
+              $id: '#/properties/content/properties/Item/items/properties/Category'
+              type: string
+              title: The Category Schema
+              examples:
+                - Animal
+              pattern: ^(.*)$
+            DisplayValue:
+              $id: '#/properties/content/properties/Item/items/properties/DisplayValue'
+              type: string
+              title: The Displayvalue Schema
+              examples:
+                - Somebody
+              pattern: ^(.*)$
+            ItemDescription:
+              $id: '#/properties/content/properties/Item/items/properties/ItemDescription'
+              type: string
+              title: The Itemdescription Schema
+              examples:
+                - Black cat
+              pattern: ^(.*)$
+            ItemDescriptionShadow:
+              $id: '#/properties/content/properties/Item/items/properties/ItemDescriptionShadow'
+              type: string
+              title: The Itemdescriptionshadow Schema
+              examples:
+                - Black cat
+              pattern: ^(.*)$
+            ItemName:
+              $id: '#/properties/content/properties/Item/items/properties/ItemName'
+              type: string
+              title: The Itemname Schema
+              examples:
+                - Cat
+              pattern: ^(.*)$
+            ItemValueDoller:
+              $id: '#/properties/content/properties/Item/items/properties/ItemValueDoller'
+              type: string
+              title: The Itemvaluedoller Schema
+              examples:
+                - '1000'
+              pattern: ^(.*)$
+            NIAItemName:
+              $id: '#/properties/content/properties/Item/items/properties/NIAItemName'
+              type: string
+              title: The Niaitemname Schema
+              examples:
+                - Cat
+              pattern: ^(.*)$
+            NotInLookUp:
+              $id: '#/properties/content/properties/Item/items/properties/NotInLookUp'
+              type: boolean
+              title: The Notinlookup Schema
+              default: false
+              examples:
+                - false
+            SerialNumber:
+              $id: '#/properties/content/properties/Item/items/properties/SerialNumber'
+              type: string
+              title: The Serialnumber Schema
+              examples:
+                - E12345678
+              pattern: ^(.*)$
+            WhoOwnsIt:
+              $id: '#/properties/content/properties/Item/items/properties/WhoOwnsIt'
+              type: string
+              title: The Whoownsit Schema
+              examples:
+                - Somebody else does
+              pattern: ^(.*)$
+            WhoOwnsItShadow:
+              $id: '#/properties/content/properties/Item/items/properties/WhoOwnsItShadow'
+              type: string
+              title: The Whoownsitshadow Schema
+              examples:
+                - SOMEBODY ELSE DOES
+              pattern: ^(.*)$
+            Owner:
+              $ref: '#/definitions/Owner'
+            SomebodyOwns:
+              $ref: '#/definitions/SomebodyOwns'
+            Organization:
+              $ref: '#/definitions/Organization'
+            OrganisationOwn:
+              $ref: '#/definitions/OrganisationOwn'
+            OrganizationItem:
+              $ref: '#/definitions/OrganizationItem'
+      LocationType:
+        $id: '#/properties/content/properties/LocationType'
+        type: object
+        title: The Locationtype Schema
+        required:
+          - LocationTypeIndicator
+          - LocationDetails
+        properties:
+          LocationTypeIndicator:
+            $id: '#/properties/content/properties/LocationType/properties/LocationTypeIndicator'
+            type: string
+            title: The Locationtypeindicator Schema
+            examples:
+              - A shop/business
+            pattern: ^(.*)$
+          LocationDetails:
+            $id: '#/properties/content/properties/LocationType/properties/LocationDetails'
+            type: object
+            title: The Locationdetails Schema
+            required:
+              - AdditonalLocationInfo
+              - LocationName
+              - NotInLookUp
+              - OtherTxtShadow
+              - Proximity
+              - Address
+              - FreeFormAddress
+            properties:
+              AdditonalLocationInfo:
+                $id: '#/properties/content/properties/LocationType/properties/LocationDetails/properties/AdditonalLocationInfo'
+                type: string
+                title: The Additonallocationinfo Schema
+                examples:
+                  - In the KFC car park
+                pattern: ^(.*)$
+              LocationName:
+                $id: '#/properties/content/properties/LocationType/properties/LocationDetails/properties/LocationName'
+                type: string
+                title: The Locationname Schema
+                examples:
+                  - KFC
+                pattern: ^(.*)$
+              NotInLookUp:
+                $id: '#/properties/content/properties/LocationType/properties/LocationDetails/properties/NotInLookUp'
+                type: boolean
+                title: The Notinlookup Schema
+                default: false
+                examples:
+                  - false
+              OtherTxtShadow:
+                $id: '#/properties/content/properties/LocationType/properties/LocationDetails/properties/OtherTxtShadow'
+                type: string
+                title: The Othertxtshadow Schema
+                examples:
+                  - In the KFC car park
+                pattern: ^(.*)$
+              Proximity:
+                $id: '#/properties/content/properties/LocationType/properties/LocationDetails/properties/Proximity'
+                type: string
+                title: The Proximity Schema
+                examples:
+                  - Outside
+                pattern: ^(.*)$
+              Address:
+                $ref: '#/definitions/Address'
+              FreeFormAddress:
+                $ref: '#/definitions/FreeFormAddress'
+      Narrative:
+        $id: '#/properties/content/properties/Narrative'
+        type: object
+        title: The Narrative Schema
+        required:
+          - DescriptionShadow
+          - EventSuburb
+          - MiscDescriptionShadow
+          - NarrativeForOnDuty
+          - NarrativeText
+          - ReasonWhy
+          - SurveyYesNo
+        properties:
+          DescriptionShadow:
+            $id: '#/properties/content/properties/Narrative/properties/DescriptionShadow'
+            type: string
+            title: The Descriptionshadow Schema
+            examples:
+              - The cat chased the duck and run away, the dog chased the cat and run
+                away.
+            pattern: ^(.*)$
+          EventSuburb:
+            $id: '#/properties/content/properties/Narrative/properties/EventSuburb'
+            type: string
+            title: The Eventsuburb Schema
+            examples:
+              - PIPITEA
+            pattern: ^(.*)$
+          MiscDescriptionShadow:
+            $id: '#/properties/content/properties/Narrative/properties/MiscDescriptionShadow'
+            type: string
+            title: The Miscdescriptionshadow Schema
+            examples:
+              - They ate wild animals, horrible and disgusting.
+            pattern: ^(.*)$
+          NarrativeForOnDuty:
+            $id: '#/properties/content/properties/Narrative/properties/NarrativeForOnDuty'
+            type: string
+            title: The Narrativeforonduty Schema
+            examples:
+              - "**** The following information has been received via Police 105 Online\
+              \ channels, ****\nand has not been sanitised (unless stated), a PDF\
+              \ copy is attached at Case **** \n\n105 Online Report #: OR-9788N\n\n\
+              **** DETAILS ****\nEvent Occurred:  26/01/2020 14:03 To 26/01/2020 15:03\n\
+              Reported Date/Time: 26/01/2020 22:03\nReporting Channel: 105 Online\n\
+              \n**** EVENT NARRATIVE / CIRCUMSTANCES **** \n[?] Please describe what\
+              \ happened. Everything you tell us helps.\nThe cat chased the duck and\
+              \ run away, the dog chased the cat and run away.\n\n**** EVENT LOCATION\
+              \ ****\nLocation: (Outside)191 THORNDON QUAY, PIPITEA, WELLINGTON CITY\
+              \ 6011\nLocation Type: A shop/business\nName of shop/business where\
+              \ it happened: KFC\nAdditional location Information: In the KFC car\
+              \ park\n\n**** INFORMANT DETAILS ****\n\n Name: BRO/Jack/Dog\n[?] Have\
+              \ you previously been known by another name     Yes\nPrevious Name:\
+              \ LOVER/Jacob/Dog\nDate of Birth: 01/01/2000(20yrs )     Gender: Gender\
+              \ Diverse     DLIC: DT111222\nPreferred Contact Method: Email\n ADDRESS\
+              \ DETAILS: \n(Work address) Building 222 999 High Street West Street\
+              \ Avalon, Lower Hutt City\n\nPHONE DETAILS: \n(Home) +64 04 417714\n\
+              (Work) +64 04 424424\n(Mobile) +64 21 022220\n\nEMAIL DETAILS: \njackdogbro@gmail.com\n\
+              jacobdoglover@gmail.com\n\n\n\n\n\n*** PROPERTY LIST SUMMARY ***\n\n\
+              \nLost Item 1\n Item Category:  Animal\n[?] What was lost     Dog\n\
+              NIA Item Classification: Animal >  >  > Dog\n[?] Who owns it     I do\n\
+              Serial or ID number: G12345678\n[?]  What is its value     10000\nPlease\
+              \ describe it: Brown Corgi\n--------------------------------------------------------------------\n\
+              Lost Item 2\n Item Category:  Animal\n[?] What was lost     Cat\nNIA\
+              \ Item Classification: Animal >  >  > Cat\n[?] Who owns it     Somebody\
+              \ else does\nSerial or ID number: E12345678\n[?]  What is its value \
+              \    1000\nPlease describe it: Black cat\n\n **** ITEM OWNER DETAILS\
+              \ ****\n\n Name: LOVER/Jason/Cat\nAge (in yrs) or date of birth: 02/02/2002\t\
+              Gender: Male\n[?] How are they related to you? \tKnown to Each Other\n\
+              \n ADDRESS DETAILS: \n(Contact address) 943 HIGH STREET, AVALON, LOWER\
+              \ HUTT CITY 5011\nPHONE DETAILS: \n(Mobile) +64 22 12344321\n\nEMAIL\
+              \ DETAILS: jasoncatlover@gmail.com\n\n--------------------------------------------------------------------\n\
+              Lost Item 3\n Item Category:  \n[?] What was lost     Duck\nNIA Item\
+              \ Classification:  >  >  > Duck\n[?] Who owns it     An organisation\
+              \ does\nSerial or ID number: 12344321\n[?]  What is its value     500\n\
+              Please describe it: Yellow Rubber Duck\n\n **** ORGANISATION DETAILS\
+              \ ****\n Name: BNZ\n\n ADDRESS DETAILS: \n96 LAKE TERRACE, TAUPO, TAUPO\
+              \ DISTRICT 3330\nPHONE DETAILS: \n(Work) +64 04 567890\n\nEMAIL DETAILS:\
+              \ \n--------------------------------------------------------------------\n\
+              \n\n\n**** END OF 105 ONLINE REPORT ****"
+            pattern: ^(.*)$
+          NarrativeText:
+            $id: '#/properties/content/properties/Narrative/properties/NarrativeText'
+            type: string
+            title: The Narrativetext Schema
+            examples:
+              - The cat chased the duck and run away, the dog chased the cat and run
+                away.
+            pattern: ^(.*)$
+          ReasonWhy:
+            $id: '#/properties/content/properties/Narrative/properties/ReasonWhy'
+            type: string
+            title: The Reasonwhy Schema
+            examples:
+              - They ate wild animals, horrible and disgusting.
+            pattern: ^(.*)$
+          SurveyYesNo:
+            $id: '#/properties/content/properties/Narrative/properties/SurveyYesNo'
+            type: string
+            title: The Surveyyesno Schema
+            examples:
+              - 'No'
+            pattern: ^(.*)$
+      Offender:
+        $id: '#/properties/content/properties/Offender'
+        type: object
+        title: The Offender Schema
+        required:
+          - Description
+          - DescriptionQuestion
+          - KnownIndicator
+          - OtherQuestion
+          - OffenderDescription
+          - RelationshipToVictim
+          - SeenOffender
+          - VehicleDescription
+          - VehicleRegistration
+          - Witness
+        properties:
+          Description:
+            $id: '#/properties/content/properties/Offender/properties/Description'
+            type: string
+            title: The Description Schema
+            examples:
+              - A man called nCov
+            pattern: ^(.*)$
+          DescriptionQuestion:
+            $id: '#/properties/content/properties/Offender/properties/DescriptionQuestion'
+            type: string
+            title: The Descriptionquestion Schema
+            examples:
+              - 'Yes'
+            pattern: ^(.*)$
+          KnownIndicator:
+            $id: '#/properties/content/properties/Offender/properties/KnownIndicator'
+            type: string
+            title: The Knownindicator Schema
+            examples:
+              - 'Yes'
+            pattern: ^(.*)$
+          OtherQuestion:
+            $id: '#/properties/content/properties/Offender/properties/OtherQuestion'
+            type: string
+            title: The OtherQuestion Schema
+            examples:
+              - 'How I know the person if relationship is other'
+            pattern: ^(.*)$
+          OffenderDescription:
+            $id: '#/properties/content/properties/Offender/properties/OffenderDescription'
+            type: string
+            title: The Offenderdescription Schema
+            examples:
+              - age 2019, wearing a medical N95 mask
+            pattern: ^(.*)$
+          RelationshipToVictim:
+            $id: '#/properties/content/properties/Offender/properties/RelationshipToVictim'
+            type: string
+            title: The Relationshiptovictim Schema
+            examples:
+              - A friend/acquaintance
+            pattern: ^(.*)$
+          SeenOffender:
+            $id: '#/properties/content/properties/Offender/properties/SeenOffender'
+            type: string
+            title: The Seenoffender Schema
+            examples:
+              - 'Yes'
+            pattern: ^(.*)$
+          VehicleDescription:
+            $id: '#/properties/content/properties/Offender/properties/VehicleDescription'
+            type: string
+            title: The Vehicledescription Schema
+            examples:
+              - BMW SUV
+            pattern: ^(.*)$
+          VehicleRegistration:
+            $id: '#/properties/content/properties/Offender/properties/VehicleRegistration'
+            type: string
+            title: The Vehicleregistration Schema
+            examples:
+              - COV019
+            pattern: ^(.*)$
+          Witness:
+            $id: '#/properties/content/properties/Offender/properties/Witness'
+            type: object
+            title: The Witness Schema
+            required:
+              - NameContact
+              - NameContactShadow
+              - WitnessIndicator
+            properties:
+              NameContact:
+                $id: '#/properties/content/properties/Offender/properties/Witness/properties/NameContact'
+                type: string
+                title: The Namecontact Schema
+                examples:
+                  - Jack and Rose
+                pattern: ^(.*)$
+              NameContactShadow:
+                $id: '#/properties/content/properties/Offender/properties/Witness/properties/NameContactShadow'
+                type: string
+                title: The Namecontactshadow Schema
+                examples:
+                  - Jack and Rose
+                pattern: ^(.*)$
+              WitnessIndicator:
+                $id: '#/properties/content/properties/Offender/properties/Witness/properties/WitnessIndicator'
+                type: string
+                title: The Witnessindicator Schema
+                examples:
+                  - 'Yes'
+                pattern: ^(.*)$
+      OrganizationDoes:
+        $id: '#/properties/content/properties/OrganizationDoes'
+        type: array
+        title: The Organizationdoes Schema
+        items:
+          $id: '#/properties/content/properties/OrganizationDoes/items'
+          type: object
+          title: The Items Schema
+          required:
+            - NotInLookUp
+            - Address
+            - FreeFormAddress
+            - Organization
+            - Phones
+          properties:
+            NotInLookUp:
+              $id: '#/properties/content/properties/OrganizationDoes/items/properties/NotInLookUp'
+              type: boolean
+              title: The Notinlookup Schema
+              default: false
+              examples:
+                - false
+            Address:
+              $ref: '#/definitions/Address'
+            FreeFormAddress:
+              $ref: '#/definitions/FreeFormAddress'
+            Organization:
+              $ref: '#/definitions/Organization'
+            Phones:
+              $ref: '#/definitions/Phones'
+      Person:
+        $id: '#/properties/content/properties/Person'
+        type: object
+        title: The Person Schema
+        required:
+          - AddressType
+          - DOB
+          - FirstName
+          - FirstNameShadow
+          - Gender
+          - KnowByOtherName
+          - LicenseNumber
+          - MiddleName
+          - MiddleNameShadow
+          - NotInLookUp
+          - PreferedContact
+          - SurName
+          - SurNameShadow
+          - VictimSupport
+          - AlternativeName
+          - EmailAddress
+          - Address
+          - FreeFormAddress
+          - Phones
+        properties:
+          AddressType:
+            $id: '#/properties/content/properties/Person/properties/AddressType'
+            type: string
+            title: The Addresstype Schema
+            examples:
+              - Work address
+            pattern: ^(.*)$
+          DOB:
+            $id: '#/properties/content/properties/Person/properties/DOB'
+            type: string
+            title: The Dob Schema
+            examples:
+              - '2000-01-01'
+            pattern: ^(.*)$
+          FirstName:
+            $id: '#/properties/content/properties/Person/properties/FirstName'
+            type: string
+            title: The Firstname Schema
+            examples:
+              - Jack
+            pattern: ^(.*)$
+          FirstNameShadow:
+            $id: '#/properties/content/properties/Person/properties/FirstNameShadow'
+            type: string
+            title: The Firstnameshadow Schema
+            examples:
+              - Jack
+            pattern: ^(.*)$
+          Gender:
+            $id: '#/properties/content/properties/Person/properties/Gender'
+            type: string
+            title: The Gender Schema
+            examples:
+              - Gender Diverse
+            pattern: ^(.*)$
+          KnowByOtherName:
+            $id: '#/properties/content/properties/Person/properties/KnowByOtherName'
+            type: boolean
+            title: The Knowbyothername Schema
+            default: false
+            examples:
+              - true
+          LicenseNumber:
+            $id: '#/properties/content/properties/Person/properties/LicenseNumber'
+            type: string
+            title: The Licensenumber Schema
+            examples:
+              - DT111222
+            pattern: ^(.*)$
+          MiddleName:
+            $id: '#/properties/content/properties/Person/properties/MiddleName'
+            type: string
+            title: The Middlename Schema
+            examples:
+              - Dog
+            pattern: ^(.*)$
+          MiddleNameShadow:
+            $id: '#/properties/content/properties/Person/properties/MiddleNameShadow'
+            type: string
+            title: The Middlenameshadow Schema
+            examples:
+              - Dog
+            pattern: ^(.*)$
+          NotInLookUp:
+            $id: '#/properties/content/properties/Person/properties/NotInLookUp'
+            type: boolean
+            title: The Notinlookup Schema
+            default: false
+            examples:
+              - true
+          PreferedContact:
+            $id: '#/properties/content/properties/Person/properties/PreferedContact'
+            type: string
+            title: The Preferedcontact Schema
+            examples:
+              - Email
+            pattern: ^(.*)$
+          SurName:
+            $id: '#/properties/content/properties/Person/properties/SurName'
+            type: string
+            title: The Surname Schema
+            examples:
+              - BRO
+            pattern: ^(.*)$
+          SurNameShadow:
+            $id: '#/properties/content/properties/Person/properties/SurNameShadow'
+            type: string
+            title: The Surnameshadow Schema
+            examples:
+              - BRO
+            pattern: ^(.*)$
+          VictimSupport:
+            $id: '#/properties/content/properties/Person/properties/VictimSupport'
+            type: string
+            title: The Victimsupport Schema
+            examples:
+              - 'Yes'
+            pattern: ^(.*)$
+          AlternativeName:
+            $id: '#/properties/content/properties/Person/properties/AlternativeName'
+            type: object
+            title: The Alternativename Schema
+            required:
+              - FirstName
+              - FirstNameShadow
+              - LastName
+              - LastNameShadow
+              - MiddleName
+              - MiddleNameShadow
+            properties:
+              FirstName:
+                $id: '#/properties/content/properties/Person/properties/AlternativeName/properties/FirstName'
+                type: string
+                title: The Firstname Schema
+                examples:
+                  - Jacob
+                pattern: ^(.*)$
+              FirstNameShadow:
+                $id: '#/properties/content/properties/Person/properties/AlternativeName/properties/FirstNameShadow'
+                type: string
+                title: The Firstnameshadow Schema
+                examples:
+                  - Jacob
+                pattern: ^(.*)$
+              LastName:
+                $id: '#/properties/content/properties/Person/properties/AlternativeName/properties/LastName'
+                type: string
+                title: The Lastname Schema
+                examples:
+                  - LOVER
+                pattern: ^(.*)$
+              LastNameShadow:
+                $id: '#/properties/content/properties/Person/properties/AlternativeName/properties/LastNameShadow'
+                type: string
+                title: The Lastnameshadow Schema
+                examples:
+                  - LOVER
+                pattern: ^(.*)$
+              MiddleName:
+                $id: '#/properties/content/properties/Person/properties/AlternativeName/properties/MiddleName'
+                type: string
+                title: The Middlename Schema
+                examples:
+                  - Dog
+                pattern: ^(.*)$
+              MiddleNameShadow:
+                $id: '#/properties/content/properties/Person/properties/AlternativeName/properties/MiddleNameShadow'
+                type: string
+                title: The Middlenameshadow Schema
+                examples:
+                  - Dog
+                pattern: ^(.*)$
+          EmailAddress:
+            $ref: '#/definitions/EmailAddress'
+          Address:
+            $ref: '#/definitions/Address'
+          FreeFormAddress:
+            $ref: '#/definitions/FreeFormAddress'
+          Phones:
+            $ref: '#/definitions/Phones'
+      Properties:
+        $id: '#/properties/content/properties/Properties'
+        type: array
+        title: The Properties Schema
+        items:
+          $id: '#/properties/content/properties/Properties/items'
+          type: object
+          title: The Items Schema
+          required:
+            - Category
+            - DamageDescription
+            - DamageDesShadow
+            - DisplayValue
+            - NIAItemName
+            - NotInLookUp
+            - PropertyType
+            - SubCategory
+            - WhoOwnsIt
+            - WhoOwnsItShadow
+            - Owner
+            - SomebodyOwns
+            - Organization
+            - OrganisationOwn
+            - OrganizationItem
+          properties:
+            Category:
+              $id: '#/properties/content/properties/Properties/items/properties/Category'
+              type: string
+              title: The Category Schema
+              examples:
+                - MOTOR VEHICLE PARTS/ACCESSORIES
+              pattern: ^(.*)$
+            DamageDescription:
+              $id: '#/properties/content/properties/Properties/items/properties/DamageDescription'
+              type: string
+              title: The Damagedescription Schema
+              examples:
+                - spikes on the road
+              pattern: ^(.*)$
+            DamageDesShadow:
+              $id: '#/properties/content/properties/Properties/items/properties/DamageDesShadow'
+              type: string
+              title: The Damagedesshadow Schema
+              examples:
+                - spikes on the road
+              pattern: ^(.*)$
+            DisplayValue:
+              $id: '#/properties/content/properties/Properties/items/properties/DisplayValue'
+              type: string
+              title: The Displayvalue Schema
+              examples:
+                - I
+              pattern: ^(.*)$
+            NIAItemName:
+              $id: '#/properties/content/properties/Properties/items/properties/NIAItemName'
+              type: string
+              title: The Niaitemname Schema
+              examples:
+                - Tyres
+              pattern: ^(.*)$
+            NotInLookUp:
+              $id: '#/properties/content/properties/Properties/items/properties/NotInLookUp'
+              type: boolean
+              title: The Notinlookup Schema
+              default: false
+              examples:
+                - false
+            PropertyType:
+              $id: '#/properties/content/properties/Properties/items/properties/PropertyType'
+              type: string
+              title: The Propertytype Schema
+              examples:
+                - Tyres(Vehicle – Part)
+              pattern: ^(.*)$
+            SubCategory:
+              $id: '#/properties/content/properties/Properties/items/properties/SubCategory'
+              type: string
+              title: The Subcategory Schema
+              examples:
+                - Part
+              pattern: ^(.*)$
+            WhoOwnsIt:
+              $id: '#/properties/content/properties/Properties/items/properties/WhoOwnsIt'
+              type: string
+              title: The Whoownsit Schema
+              examples:
+                - I do
+              pattern: ^(.*)$
+            WhoOwnsItShadow:
+              $id: '#/properties/content/properties/Properties/items/properties/WhoOwnsItShadow'
+              type: string
+              title: The Whoownsitshadow Schema
+              examples:
+                - I DO
+              pattern: ^(.*)$
+            Owner:
+              $ref: '#/definitions/Owner'
+            SomebodyOwns:
+              $ref: '#/definitions/SomebodyOwns'
+            Organization:
+              $ref: '#/definitions/Organization'
+            OrganisationOwn:
+              $ref: '#/definitions/OrganisationOwn'
+            OrganizationItem:
+              $ref: '#/definitions/OrganizationItem'
+      Property:
+        $id: '#/properties/content/properties/Property'
+        type: object
+        title: The Property Schema
+        required:
+          - PropertyVehicle
+        properties:
+          PropertyVehicle:
+            $id: '#/properties/content/properties/Property/properties/PropertyVehicle'
+            type: object
+            title: The Propertyvehicle Schema
+            required:
+              - Registration
+              - VehicleLocation
+            properties:
+              Registration:
+                $id: '#/properties/content/properties/Property/properties/PropertyVehicle/properties/Registration'
+                type: string
+                title: The Registration Schema
+                examples:
+                  - KEF222
+                pattern: ^(.*)$
+              VehicleLocation:
+                $id: '#/properties/content/properties/Property/properties/PropertyVehicle/properties/VehicleLocation'
+                type: string
+                title: The Vehiclelocation Schema
+                examples:
+                  - Parked in a public carpark
+                pattern: ^(.*)$
+      SomebodyElse:
+        $id: '#/properties/content/properties/SomebodyElse'
+        type: array
+        title: The Somebodyelse Schema
+        items:
+          $id: '#/properties/content/properties/SomebodyElse/items'
+          type: object
+          title: The Items Schema
+          required:
+            - AddressType
+            - AgeOrBirth
+            - FirstName
+            - FirstNameShadow
+            - FullNameShadow
+            - Gender
+            - MiddleName
+            - MiddleNameShadow
+            - NotInLookUp
+            - Relation
+            - SurName
+            - SurNameShadow
+            - VictimSupport
+            - Address
+            - FreeFormAddress
+            - EmailAddress
+            - Phones
+          properties:
+            AddressType:
+              $id: '#/properties/content/properties/SomebodyElse/items/properties/AddressType'
+              type: string
+              title: The Addresstype Schema
+              examples:
+                - Contact address
+              pattern: ^(.*)$
+            AgeOrBirth:
+              $id: '#/properties/content/properties/SomebodyElse/items/properties/AgeOrBirth'
+              type: string
+              title: The Ageorbirth Schema
+              examples:
+                - 02/02/2002
+              pattern: ^(.*)$
+            FirstName:
+              $id: '#/properties/content/properties/SomebodyElse/items/properties/FirstName'
+              type: string
+              title: The Firstname Schema
+              examples:
+                - Jason
+              pattern: ^(.*)$
+            FirstNameShadow:
+              $id: '#/properties/content/properties/SomebodyElse/items/properties/FirstNameShadow'
+              type: string
+              title: The Firstnameshadow Schema
+              examples:
+                - Jason
+              pattern: ^(.*)$
+            FullNameShadow:
+              $id: '#/properties/content/properties/SomebodyElse/items/properties/FullNameShadow'
+              type: string
+              title: The Fullnameshadow Schema
+              examples:
+                - Jason LOVER
+              pattern: ^(.*)$
+            Gender:
+              $id: '#/properties/content/properties/SomebodyElse/items/properties/Gender'
+              type: string
+              title: The Gender Schema
+              examples:
+                - Male
+              pattern: ^(.*)$
+            MiddleName:
+              $id: '#/properties/content/properties/SomebodyElse/items/properties/MiddleName'
+              type: string
+              title: The Middlename Schema
+              examples:
+                - Cat
+              pattern: ^(.*)$
+            MiddleNameShadow:
+              $id: '#/properties/content/properties/SomebodyElse/items/properties/MiddleNameShadow'
+              type: string
+              title: The Middlenameshadow Schema
+              examples:
+                - Cat
+              pattern: ^(.*)$
+            NotInLookUp:
+              $id: '#/properties/content/properties/SomebodyElse/items/properties/NotInLookUp'
+              type: boolean
+              title: The Notinlookup Schema
+              default: false
+              examples:
+                - false
+            Relation:
+              $id: '#/properties/content/properties/SomebodyElse/items/properties/Relation'
+              type: string
+              title: The Relation Schema
+              examples:
+                - Known to Each Other
+              pattern: ^(.*)$
+            SurName:
+              $id: '#/properties/content/properties/SomebodyElse/items/properties/SurName'
+              type: string
+              title: The Surname Schema
+              examples:
+                - LOVER
+              pattern: ^(.*)$
+            SurNameShadow:
+              $id: '#/properties/content/properties/SomebodyElse/items/properties/SurNameShadow'
+              type: string
+              title: The Surnameshadow Schema
+              examples:
+                - LOVER
+              pattern: ^(.*)$
+            VictimSupport:
+              $id: '#/properties/content/properties/SomebodyElse/items/properties/VictimSupport'
+              type: string
+              title: The Victimsupport Schema
+              examples:
+                - 'Yes'
+              pattern: ^(.*)$
+            Address:
+              $ref: '#/definitions/Address'
+            FreeFormAddress:
+              $ref: '#/definitions/FreeFormAddress'
+            EmailAddress:
+              $ref: '#/definitions/EmailAddress'
+            Phones:
+              $ref: '#/definitions/Phones'
+      StolenVehicle:
+        $id: '#/properties/content/properties/StolenVehicle'
+        type: array
+        title: The Stolenvehicle Schema
+        items:
+          $id: '#/properties/content/properties/StolenVehicle/items'
+          type: object
+          title: The Items Schema
+          required:
+            - DisplayValue
+            - Make
+            - Registration
+            - SelfTowingApproval
+            - SomeonesTowingApproval
+            - VehicleDescription
+            - VehicleDesShadow
+            - VehicleLocation
+            - VehicleType
+            - WhoOwnsIt
+            - WhoOwnsItShadow
+            - Owner
+            - SomebodyOwns
+            - Organization
+            - OrganisationOwn
+            - OrganizationItem
+          properties:
+            DisplayValue:
+              $id: '#/properties/content/properties/StolenVehicle/items/properties/DisplayValue'
+              type: string
+              title: The Displayvalue Schema
+              examples:
+                - I
+              pattern: ^(.*)$
+            Make:
+              $id: '#/properties/content/properties/StolenVehicle/items/properties/Make'
+              type: string
+              title: The Make Schema
+              examples:
+                - Chrysler Jeep
+              pattern: ^(.*)$
+            Registration:
+              $id: '#/properties/content/properties/StolenVehicle/items/properties/Registration'
+              type: string
+              title: The Registration Schema
+              examples:
+                - KKK222
+              pattern: ^(.*)$
+            SelfTowingApproval:
+              $id: '#/properties/content/properties/StolenVehicle/items/properties/SelfTowingApproval'
+              type: string
+              title: The Selftowingapproval Schema
+              examples:
+                - 'Yes'
+              pattern: ^(.*)$
+            SomeonesTowingApproval:
+              $id: '#/properties/content/properties/StolenVehicle/items/properties/SomeonesTowingApproval'
+              type: string
+              title: The SomeonesTowingApproval Schema
+              examples:
+                - 'Yes'
+              pattern: ^(.*)$
+            VehicleDescription:
+              $id: '#/properties/content/properties/StolenVehicle/items/properties/VehicleDescription'
+              type: string
+              title: The Vehicledescription Schema
+              examples:
+                - Model 2020
+              pattern: ^(.*)$
+            VehicleDesShadow:
+              $id: '#/properties/content/properties/StolenVehicle/items/properties/VehicleDesShadow'
+              type: string
+              title: The Vehicledesshadow Schema
+              examples:
+                - Model 2020
+              pattern: ^(.*)$
+            VehicleLocation:
+              $id: '#/properties/content/properties/StolenVehicle/items/properties/VehicleLocation'
+              type: string
+              title: The Vehiclelocation Schema
+              examples:
+                - Parked in a public carpark
+              pattern: ^(.*)$
+            VehicleType:
+              $id: '#/properties/content/properties/StolenVehicle/items/properties/VehicleType'
+              type: string
+              title: The Vehicletype Schema
+              examples:
+                - Car
+              pattern: ^(.*)$
+            WhoOwnsIt:
+              $id: '#/properties/content/properties/StolenVehicle/items/properties/WhoOwnsIt'
+              type: string
+              title: The Whoownsit Schema
+              examples:
+                - I do
+              pattern: ^(.*)$
+            WhoOwnsItShadow:
+              $id: '#/properties/content/properties/StolenVehicle/items/properties/WhoOwnsItShadow'
+              type: string
+              title: The Whoownsitshadow Schema
+              examples:
+                - I DO
+              pattern: ^(.*)$
+            Owner:
+              $ref: '#/definitions/Owner'
+            SomebodyOwns:
+              $ref: '#/definitions/SomebodyOwns'
+            Organization:
+              $ref: '#/definitions/Organization'
+            OrganisationOwn:
+              $ref: '#/definitions/OrganisationOwn'
+            OrganizationItem:
+              $ref: '#/definitions/OrganizationItem'

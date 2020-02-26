@@ -1,0 +1,851 @@
+openapi: 3.0.0
+info:
+  version: 0.0.1
+  title: NZP Online Form API
+  description: This API specification is for creating non-emergency report online.
+  contact:
+    name: Ashok Kumar
+    email: ashokkumar@nzpdigital.co.nz
+tags:
+  - name: Create report
+    description: API for creating non-emergency report.
+  - name: Update report
+    description: API for updating non-emergency report.
+paths:
+  /onlinereport:
+    post:
+      summary: Api for creating non-emergency report.
+      description: This api is used for creating non-emergency report.
+      tags:
+        - Create report
+      requestBody:
+        description: request for creating non-emergency report
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/OnlineReportCaseRequest"
+            example:
+              {
+                "notAnEmergency": true,
+                "reportType": {
+                  "someoneHurt": true,
+                  "somethingDamaged": true,
+                  "somethingStolen": true,
+                  "somethingLost": false,
+                  "somethingElse": false
+                },
+                "eventInfo": {
+                  "whenItHappened": {
+                    "startDateTime": "2020-01-07T12:30:00.000Z",
+                    "endDateTime": "2020-01-07T12:30:00.000Z"
+                  },
+                  "whereItHappened": {
+                    "locationType": "HOME",
+                    "address": {
+                      "cannotFind": true,
+                      "search": null,
+                      "manual": {
+                        "unitType": "NONE",
+                        "unitNumber": "",
+                        "streetNumber": "5",
+                        "streetName": "Main",
+                        "streetType": "Road",
+                        "suburb": "Christchurch"
+                      }
+                    },
+                    "howCloseToAddress": "AT",
+                    "additionalInformation": "In the command center",
+                    "stolenFromVehicle": true,
+                    "licencePlate": "KAYAK4",
+                    "vehicleLocation": "PUBLIC_CARPARK"
+                  },
+                  "whoWasInvolved": {
+                    "knowsWho": true,
+                    "who": {
+                      "description": "The Other King. Yes, THAT Other King. Resides at the highest peak of Las Vegas.",
+                      "relationType": "OTHER",
+                      "relationOther": "Arch nemesis"
+                    },
+                    "knowsDescription": true,
+                    "description": "Very big. Can fly. Hooded in grey. Looks pretty evil - you'll know him when you see him.",
+                    "knowsVehicle": true,
+                    "vehicle": {
+                      "licencePlate": "ICKM66",
+                      "description": "It's an InterContinental Kabbalistic Missile. Travels pretty fast. Long and thin."
+                    },
+                    "knowsContact": true,
+                    "contact": "Sohu is probably the best to talk to."
+                  },
+                  "damagedVehicles": {
+                    "anyDamaged": true,
+                    "vehicles": [
+                    {
+                      "licencePlate": "KAYAK4",
+                      "owner": {
+                        "type": "OTHER_PERSON",
+                        "index": 0
+                      },
+                      "type": "OTHER",
+                      "make": "A flying kayak",
+                      "description": "It flies. The only other I know of is Sohu's, so it's pretty unique.",
+                      "location": "COMMERCIAL_PROPERTY",
+                      "howAndWhere": "It was pretty much blown to smithereens, I'm telling you.",
+                      "wasMoved": false,
+                      "ignitionTamperedWith": false
+                    }
+                    ]
+                  },
+                  "damagedItems": [
+                  {
+                    "what": {
+                      "cannotFind": false,
+                      "search": {
+                        "displayValue": "Mobile Disco",
+                        "itemName": "Mobile Disco"
+                      },
+                      "manual": null
+                    },
+                    "owner": {
+                      "type": "ORGANISATION",
+                      "index": 0
+                    },
+                    "description": "Giant 10 towered supercomputer called THARMAS that controls the nuclear capability of the Untied States. The Other King scorched it unto blue flames."
+                  }
+                  ],
+
+                  "stolenVehicles": {
+                    "anyStolen": true,
+                    "vehicles": [
+                    {
+                      "licencePlate": "abcdfe",
+                      "location": "PARKING_LOT",
+                      "owner": {
+                        "type": "ORGANISATION",
+                        "index": 0
+                      },
+                      "type": "CAR",
+                      "make": "BMW",
+                      "description": "A superfast yacht with seven sails",
+                      "agreesToTow": true
+                    }
+                    ]
+                  },
+                  "stolenItems": [
+                  {
+                    "what": {
+                      "cannotFind": true,
+                      "search": null,
+                      "manual": "Purple dragon beanie baby"
+                    },
+                    "owner": {
+                      "type": "OTHER_PERSON",
+                      "index": 0
+                    },
+                    "id": "",
+                    "value": "10",
+                    "description": ""
+                  }
+                  ],
+                  "whoWasHurt": {
+                    "who": "Caelius West",
+                    "how": "He was sent up in a blaze of blue flame. There was only ash left."
+                  },
+                  "whatHappened": {
+                    "description": "Oh gosh. Well, a lot has happened",
+                    "why": "Something about whatever power in the Universe meted out judgment."
+                  },
+                  "additionalInformation": {
+                    "files": [],
+                    "otherEvidence": "otherEvidence"
+                  }
+                },
+                "contacts": {
+                  "reporter": {
+                    "personalDetails": {
+                      "name": {
+                        "first": "Aaron",
+                        "middle": "Levi",
+                        "last": "Smith-Teller"
+                      },
+                      "dateOfBirth": "1989-11-09",
+                      "gender": "MALE",
+                      "driverLicence": "DI123456",
+                      "hasPreviousName": true,
+                      "previousName": {
+                        "first": "Los",
+                        "middle": "",
+                        "last": "Enitharmon"
+                      }
+                    },
+                    "contactDetails": {
+                      "preferredContactMethod": "EMAIL",
+                      "emails": ["aaron_smith_teller@gmail.com", "asteller@countenance.com"],
+                      "phoneNumbers": [
+                      {
+                        "type": "MOBILE",
+                        "country": "64",
+                        "area": "21",
+                        "number": "1234567"
+                      },
+                      {
+                        "type": "HOME",
+                        "country": "64",
+                        "area": "21",
+                        "number": "1234567"
+                      },
+                      {
+                        "type": "WORK",
+                        "country": "64",
+                        "area": "21",
+                        "number": "1234567"
+                      }
+
+                      ],
+                      "address": {
+                        "type": "HOME",
+                        "cannotFind": true,
+                        "search": null,
+                        "manual": {
+                          "unitType": "NONE",
+                          "unitNumber": "",
+                          "streetNumber": "5",
+                          "streetName": "Main",
+                          "streetType": "Road",
+                          "suburb": "Redcliffs",
+                          "country": "New Zealand"
+                        }
+                      }
+                    },
+                    "wantsVictimSupport": true
+                  },
+                  "otherPeople": [
+                  {
+                    "personalDetails": {
+                      "name": {
+                        "first": "Jinxiang",
+                        "middle": "",
+                        "last": "West"
+                      },
+                      "dateOfBirth": "1989-11-09",
+                      "gender": "FEMALE",
+                      "relation": "STRANGER"
+                    },
+                    "contactDetails": {
+                      "phoneNumbers": [
+                      {
+                        "type": "MOBILE",
+                        "country": "64",
+                        "area": "21",
+                        "number": "1234567"
+                      }
+                      ],
+                      "address": {
+                        "type": "WORK",
+                        "cannotFind": true,
+                        "search": null,
+                        "manual": {
+                          "unitType": "NONE",
+                          "unitNumber": "",
+                          "streetNumber": "5",
+                          "streetName": "Main",
+                          "streetType": "Road",
+                          "suburb": "Christchurch Central, Christchurch City",
+                          "country": "New Zealand"
+                        }
+                      }
+                    },
+                    "wantsVictimSupport": false
+                  }
+                  ],
+                  "organisations": [
+                  {
+                    "name": "Citadel West",
+                    "contactDetails": {
+                      "phoneNumbers": [
+                      {
+                        "type": "MOBILE",
+                        "country": "64",
+                        "area": "21",
+                        "number": "1234567"
+                      }
+                      ],
+                      "address": {
+                        "type": "WORK",
+                        "cannotFind": true,
+                        "search": null,
+                        "manual": {
+                          "unitType": "NONE",
+                          "unitNumber": "",
+                          "streetNumber": "5",
+                          "streetName": "Main",
+                          "streetType": "Road",
+                          "suburb": "Christchurch Central, Christchurch City",
+                          "country": "New Zealand"
+                        }
+                      }
+                    }
+                  }
+                  ]
+                }
+              }
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Report"
+              example:
+                {
+                  "caseId": "POLICE-SDW-WORK OR-6892N"
+                }
+        "400":
+          description: Request for creating report not valid
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BusinessError"
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BusinessError"
+        "408":
+          description: Request Timeout
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BusinessError"
+        default:
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GeneralError"
+  /onlinereport/{caseId}:
+    parameters:
+      - name: caseId
+        in: path
+        required: true
+        schema:
+          type: string
+    put:
+      summary: Api for enriching non-emergency report.
+      description: This api is used for enriching non-emergency report.
+      tags:
+        - Update report
+      requestBody:
+        description: request for updating non-emergency report
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/OnlineReportCaseRequest"
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Report"
+        "400":
+          description: Request for creating report not valid
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BusinessError"
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BusinessError"
+        "408":
+          description: Request Timeout
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BusinessError"
+        default:
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GeneralError"
+    get:
+      summary: Api for enriching non-emergency report.
+      description: This api is used for getting non-emergency report.
+      tags:
+        - Get report
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OnlineReportCaseRequest"
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BusinessError"
+        "408":
+          description: Request Timeout
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BusinessError"
+        default:
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GeneralError"
+  /onlinereport/{caseId}/commit:
+    parameters:
+      - name: caseId
+        in: path
+        required: true
+        schema:
+          type: string
+    put:
+      summary: Api for commiting non-emergency report.
+      description: This api is used for commiting non-emergency report.
+      tags:
+        - Update report
+      requestBody:
+        description: request for commiting non-emergency report
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/OnlineReportCaseRequest"
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Report"
+        "400":
+          description: Request for creating report not valid
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BusinessError"
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BusinessError"
+        "408":
+          description: Request Timeout
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BusinessError"
+        default:
+          description: Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/GeneralError"
+servers:
+  - url: http://0.0.0.0:3000/nzpdigital/onlineform/v1
+  - url: https://0.0.0.0:3000/nzpdigital/onlineform/v1
+components:
+  schemas:
+    GeneralError:
+      required:
+        - error
+      properties:
+        error:
+          type: string
+    BusinessError:
+      type: object
+      required:
+        - message
+        - error
+      properties:
+        message:
+          type: string
+        error:
+          type: string
+    OnlineReportCaseRequest:
+      type: object
+      properties:
+        notAnEmergency:
+          type: boolean
+        reportType:
+          $ref: "#/components/schemas/ReportType"
+        eventInfo:
+          $ref: "#/components/schemas/EventInfo"
+        contacts:
+          $ref: "#/components/schemas/Contacts"
+    ReportType:
+      type: object
+      properties:
+        someoneHurt:
+          type: boolean
+        somethingDamaged:
+          type: boolean
+        somethingStolen:
+          type: boolean
+        somethingLost:
+          type: boolean
+        somethingElse:
+          type: boolean
+    EventInfo:
+      type: object
+      properties:
+        whenItHappened:
+          $ref: "#/components/schemas/WhenItHappened"
+        whereItHappened:
+          $ref: "#/components/schemas/WhereItHappened"
+        lostItems:
+          type: array
+          items:
+            $ref: "#/components/schemas/ItemDetail"
+        damagedItems:
+          type: array
+          items:
+            $ref: "#/components/schemas/ItemDetail"
+        damagedVehicles:
+          $ref: "#/components/schemas/DamagedVehicles"
+        whatHappened:
+          $ref: "#/components/schemas/WhatHappened"
+        whoWasHurt:
+          $ref: "#/components/schemas/WhoWasHurt"
+        whoWasInvolved:
+          $ref: "#/components/schemas/WhoWasInvolved"
+        additionalInformation:
+          $ref: "#/components/schemas/AdditionalInformation"
+        stolenVehicles:
+          $ref: "#/components/schemas/StolenVehicles"
+        stolenItems:
+          type: array
+          items:
+            $ref: "#/components/schemas/ItemDetail"
+    WhenItHappened:
+      type: object
+      properties:
+        startDateTime:
+          type: string
+          format: date-time
+        endDateTime:
+          type: string
+          format: date-time
+    WhereItHappened:
+      type: object
+      properties:
+        locationType:
+          type: string
+          enum: ["SHOP_BUSINESS", "ORGANISATION", "HOME", "PUBLIC_PLACE", "PLACE_OF_WORSHIP", "EDUCATIONAL_FACILITY", "OTHER"]
+        locationName:
+          type: string
+        address:
+          $ref: "#/components/schemas/AddressInfo"
+        howCloseToAddress:
+          type: string
+          enum: ["AT", "NEARBY", "OUTSIDE"]
+        additionalInformation:
+          type: string
+        stolenFromVehicle:
+          type: boolean
+        licencePlate:
+          type: string
+        vehicleLocation:
+          type: string
+          enum: ["DRIVEWAY", "GARAGE", "ROAD", "PUBLIC_CARPARK", "PARKING_LOT", "COMMERCIAL_PROPERTY", "BEING_DRIVEN", "BOAT_OR_SHIP"]
+    AddressInfo:
+      type: object
+      properties:
+        cannotFind:
+          type: boolean
+        search:
+          type: string
+        manual:
+          $ref: "#/components/schemas/Address"
+        type:
+          type: string
+          enum: ["HOME", "CONTACT", "WORK"]
+    Address:
+      type: object
+      properties:
+        unitType:
+          type: string
+          enum: ["NONE","UNIT", "APARTMENT"]
+        unitNumber:
+          type: string
+          maxLength: 100
+        streetNumber:
+          type: string
+          maxLength: 100
+        streetName:
+          type: string
+          maxLength: 100
+        streetType:
+          type: string
+          maxLength: 100
+        suburb:
+          type: string
+          maxLength: 100
+        country:
+          type: string
+          maxLength: 100
+    ItemDetail:
+      type: object
+      properties:
+        what:
+          $ref: "#/components/schemas/Item"
+        owner:
+          $ref: "#/components/schemas/Owner"
+        id:
+          type: string
+        value:
+          type: string
+        description:
+          type: string
+    Item:
+      type: object
+      properties:
+        cannotFind:
+          type: boolean
+        search:
+          $ref: "#/components/schemas/SearchedItem"
+        manual:
+          type: string
+    SearchedItem:
+      type: object
+      properties:
+        category:
+          type: string
+        subCategory:
+          type: string
+        displayValue:
+          type: string
+        itemName:
+          type: string
+        niaItemName:
+          type: string
+    Owner:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: ["ME", "OTHER_PERSON", "ORGANISATION"]
+        index:
+          type: integer
+    Name:
+      type: object
+      properties:
+        firstName:
+          type: string
+        middleName:
+          type: string
+        lastName:
+          type: string
+    DamagedVehicles:
+      type: object
+      properties:
+        anyDamaged:
+          type: boolean
+        vehicles:
+          type: array
+          items:
+            $ref: "#/components/schemas/Vehicle"
+    Vehicle:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: ["CAR", "COMMERCIAL", "FARM", "HEAVY_MOTOR", "MOTORCYCLE", "OTHER", "PASSENGER", "SPECIAL", "TRAILER"]
+        make:
+          type: string
+        description:
+          type: string
+        licencePlate:
+          type: string
+        location:
+          type: string
+          enum: ["DRIVEWAY", "GARAGE", "ROAD", "PUBLIC_CARPARK", "PARKING_LOT", "COMMERCIAL_PROPERTY", "BOAT_OR_SHIP"]
+        howAndWhere:
+          type: string
+        wasMoved:
+          type: boolean
+        ignitionTamperedWith:
+          type: boolean
+        owner:
+          $ref: "#/components/schemas/Owner"
+    WhatHappened:
+      type: object
+      properties:
+        description:
+          type: string
+        why:
+          type: string
+    WhoWasHurt:
+      type: object
+      properties:
+        how:
+          type: string
+        who:
+          type: string
+    WhoWasInvolved:
+      type: object
+      properties:
+        knowsWho:
+          type: boolean
+        who:
+          $ref: "#/components/schemas/Suspect"
+        knowsDescription:
+          type: boolean
+        description:
+          type: string
+        knowsVehicle:
+          type: boolean
+        knowsContact:
+          type: boolean
+        vehicle:
+          $ref: "#/components/schemas/OffenderVehicle"
+        contact:
+          type: string
+    Suspect:
+      type: object
+      properties:
+        description:
+          type: string
+        relationType:
+          type: string
+          enum: ["STRANGER", "FAMILY_MEMBER", "FRIEND_ACQUAINTANCE", "COLLEAGUE", "OTHER"]
+        relationOther:
+          type: string
+    OffenderVehicle:
+      type: object
+      properties:
+        description:
+          type: string
+        licencePlate:
+          type: string
+    AdditionalInformation:
+      type: object
+      properties:
+        otherEvidence:
+          type: string
+        files:
+          type: array
+          items:
+            type: string
+    StolenVehicles:
+      type: object
+      properties:
+        anyStolen:
+          type: boolean
+        vehicles:
+          type: array
+          items:
+            $ref: "#/components/schemas/MissingVehicle"
+    MissingVehicle:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: ["CAR", "COMMERCIAL", "FARM", "HEAVY_MOTOR", "MOTORCYCLE", "OTHER", "PASSENGER", "SPECIAL", "TRAILER"]
+        make:
+          type: string
+        description:
+          type: string
+        licencePlate:
+          type: string
+        location:
+          type: string
+          enum: ["DRIVEWAY", "GARAGE", "ROAD", "PUBLIC_CARPARK", "PARKING_LOT", "COMMERCIAL_PROPERTY", "BOAT_OR_SHIP"]
+        agreesToTow:
+          type: boolean
+        owner:
+          $ref: "#/components/schemas/Owner"
+    Contacts:
+      type: object
+      properties:
+        reporter:
+          $ref: "#/components/schemas/PersonalContact"
+        otherPeople:
+          type: array
+          items:
+            $ref: "#/components/schemas/PersonalContact"
+        organisations:
+          type: array
+          items:
+            $ref: "#/components/schemas/OrganisationContact"
+    PersonalContact:
+      type: object
+      properties:
+        personalDetails:
+          $ref: "#/components/schemas/Person"
+        contactDetails:
+          $ref: "#/components/schemas/ContactDetail"
+        victimSupportRequired:
+          type: boolean
+    OrganisationContact:
+      type: object
+      properties:
+        name:
+          type: string
+        contactDetails:
+          $ref: "#/components/schemas/ContactDetail"
+    Person:
+      type: object
+      properties:
+        name:
+          $ref: "#/components/schemas/Name"
+        previousName:
+          $ref: "#/components/schemas/Name"
+        hasPreviousName:
+          type: boolean
+        dateOfBirth:
+          type: string
+        gender:
+          type: string
+          enum: ["MALE", "FEMALE", "GENDER_DIVERSE"]
+        driverLicence:
+          type: string
+        relation:
+          type: string
+          enum: ["PARENT", "SPOUSE", "OTHER", "OTHER_RELATIVE", "CHILD", "PARTNER_LIVING_TOGETHER", "PARTNER_NOT_LIVING_TOGETHER", "SIBLING", "STEP_PARENT", "STEP_CHILD", "STRANGER", "FRIEND", "GRANDPARENT", "GRANDCHILD", "KNOWN_TO_EACH_OTHER", "FLATMATE_BOARDER", "EX_PARTNER_LIVING_TOGETHER", "EX_PARTNER_NOT_LIVING_TOGETHER", "EX_BOY_GIRL_FRIEND"]
+    ContactDetail:
+      type: object
+      properties:
+        address:
+          $ref: "#/components/schemas/AddressInfo"
+        preferredContactMethod:
+          type: string
+          enum: ["EMAIL", "PHONE"]
+        emails:
+          type: array
+          items:
+            type: string
+        phoneNumbers:
+          type: array
+          items:
+            $ref: "#/components/schemas/Phone"
+    Phone:
+      type: object
+      properties:
+        type:
+          type: string
+          enum: ["HOME", "WORK", "MOBILE"]
+        country:
+          type: string
+        area:
+          type: string
+        number:
+          type: string
+    Report:
+      type: object
+      properties:
+        caseId:
+          type: string
